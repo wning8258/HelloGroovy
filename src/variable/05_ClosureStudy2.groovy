@@ -1,5 +1,7 @@
 package variable
-
+/**
+ * 闭包和基本类型结合使用
+ */
 int x = fab(5)
 println(x)  //120
 x = fab2(5)
