@@ -72,3 +72,33 @@ class Record {
     String type
     String value
 }
+
+
+
+
+
+/**
+ * 保存object到文件 withObjectOutputStream
+ * @param object
+ * @param destPath
+ * @return
+ */
+def saveObject (Object object, String destPath) {
+    try {
+        //首先创建目标文件
+        def destFile = new File(destPath)
+        if (!destFile.exists()) {
+            destFile.createNewFile()
+        }
+        //写对象到文件
+        destFile.withObjectOutputStream { ObjectOutputStream out ->
+            out.writeObject(object)
+        }
+        return true
+    } catch (Exception e) {
+        e.printStackTrace()
+    }
+    return false
+}
+
+saveObject(writer2.toString(), "../../cars.xml")

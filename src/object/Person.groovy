@@ -3,7 +3,7 @@ package object
  * groovy默认都是public类型，并且实现了GroovyObject接口
  * public class Person implements GroovyObject {
  */
-class Person implements Action{
+class Person implements Action, Serializable{
     String name
     int age
     //使用def定义方法
