@@ -1,4 +1,4 @@
-package json
+package file
 
 import com.google.gson.Gson
 import groovy.json.JsonOutput
